@@ -223,4 +223,7 @@ def webhook():
 if __name__ == '__main__':
     print(f"🔑 Token do Webhook: {WEBHOOK_TOKEN}")
     print(f"🌐 URL do Webhook: {NGROK_URL}/webhook")
-    app.run(port=5000, debug=True)
+    
+    # Configuração ideal para produção
+    port = int(os.environ.get('PORT', 10000))  # Usa porta do ambiente ou 10000 como fallback
+    app.run(host='0.0.0.0', port=port, debug=False)
