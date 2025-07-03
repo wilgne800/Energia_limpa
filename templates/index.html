@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energia Limpa - Energia Solar com Economia Garantida</title>
+    <meta name="description" content="Reduza até 20% na sua conta de luz com energia 100% renovável, sem instalação e sem custos iniciais">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+
+<header class="sticky-header">
+    <div class="container">
+        <div class="logo">
+            <div class="logo-text">
+                <h1>Energia Limpa</h1>
+                <p>Soluções em Energia Renovável</p>
+            </div>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+        </button>
+
+        <nav class="main-nav" id="mainNav">
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#duvidas">Dúvidas</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#calculadora" class="highlight">Calcule sua Economia</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+    <div class="hero-slider">
+        <div class="slide active" style="background-image: url('{{ url_for('static', filename='images/grade.jpg') }}');">
+            <div class="container">
+                <div class="hero-content animate__animated animate__fadeInLeft">
+                    <h2>Economize até 20% na sua conta de luz</h2>
+                    <p class="subtitle">Com energia 100% renovável, sem instalação e sem custos iniciais</p>
+                    <div class="hero-buttons">
+                        <a href="#contato" class="cta-button">Quero Economizar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stat-card">
+                <div class="stat-number" data-count="20">20</div>
+                <div class="stat-label">% de Economia</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="150">55.000</div>
+                <div class="stat-label">Clientes Satisfeitos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="5">2.000.000</div>
+                <div class="stat-label">kw Gerados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="100">100</div>
+                <div class="stat-label">% Renovável</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Por que escolher a Energia Limpa?</h2>
+            <p class="section-subtitle">Soluções inteligentes para sua economia e sustentabilidade</p>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3>Energia 100% Renovável</h3>
+                    <p>Utilizamos energia solar limpa e sustentável, contribuindo para a preservação do meio ambiente.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Economia Garantida</h3>
+                    <p>Redução de até 20% na sua fatura de energia elétrica, com créditos aplicados diretamente.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Sem Instalação</h3>
+                    <p>Não é necessário instalar equipamentos ou modificar sua estrutura elétrica.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Adesão Rápida</h3>
+                    <p>Processo simples e sem burocracia, apenas com assinatura contratual e documentos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Créditos Acumuláveis</h3>
+                    <p>Créditos não utilizados ficam acumulados para os meses seguintes.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Certificado Verde</h3>
+                    <p>Receba um selo de empresa sustentável para valorizar sua marca.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+  <section id="como-funciona" class="how-it-works">
+    <div class="container">
+        <h2 class="section-title">Como Funciona</h2>
+        <p class="section-subtitle">Conheça nosso processo simples e eficiente</p>
+
+        <div class="process-steps">
+            <!-- Passo 1 -->
+            <div class="step">
+                <div class="step-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Geração de Energia</h3>
+                    <p>Nossas usinas parceiras geram energia limpa a partir de fontes renováveis.</p>
+                </div>
+            </div>
+
+            <!-- Passo 2 -->
+            <div class="step">
+                <div class="step-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+                    </svg>
+                </div>
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Injeção na Rede</h3>
+                    <p>A energia é convertida em créditos e injetada na rede da Equatorial.</p>
+                </div>
+            </div>
+
+            <!-- Passo 3 -->
+            <div class="step">
+                <div class="step-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                    </svg>
+                </div>
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Compensação</h3>
+                    <p>Os créditos são aplicados automaticamente na sua conta de luz.</p>
+                </div>
+            </div>
+
+            <!-- Passo 4 -->
+            <div class="step">
+                <div class="step-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                    </svg>
+                </div>
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Economia Real</h3>
+                    <p>Você recebe o desconto direto na fatura e ajuda o meio ambiente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="calculadora" class="calculator-section">
+    <div class="container">
+        <div class="calculator-wrapper">
+            <div class="calculator-info">
+                <h2 class="section-title">Calcule sua Economia</h2>
+                <p>Descubra quanto você pode economizar com a Energia Limpa</p>
+                <div class="calculator-image">
+                    <img src="{{ url_for('static', filename='images/casinha.png') }}" alt="Calculadora de Economia">
+                </div>
+            </div>
+            <div class="calculator-form">
+                <form id="economy-calculator">
+                    <div class="form-group">
+                        <label for="bill-amount">Valor da sua conta de luz (R$)</label>
+                        <input type="number" id="bill-amount" step="0.01" min="0" placeholder="Ex: 500,00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consumer-type">Tipo de Consumidor</label>
+                        <select id="consumer-type" required>
+                            <option value="">Selecione...</option>
+                            <option value="residential">Pessoa Física (15% de economia)</option>
+                            <option value="commercial">Pessoa Jurídica (20% de economia)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="cta-button">Calcular Economia</button>
+                </form>
+                <div class="calculator-result" id="calculator-result" style="display: none;">
+                    <h3>Sua Economia Estimada</h3>
+                    <div class="result-values">
+                        <div class="result-item">
+                            <span class="result-label">Antes:</span>
+                            <span class="result-value" id="original-value">R$ 0,00</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Com Energia Limpa:</span>
+                            <span class="result-value" id="discounted-value">R$ 0,00</span>
+                        </div>
+                        <div class="result-item highlight">
+                            <span class="result-label">Economia Mensal:</span>
+                            <span class="result-value" id="savings-value">R$ 0,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="savings-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Economia Anual Estimada</h3>
+        <div class="modal-body">
+            <p>Com a Energia Limpa, você pode economizar:</p>
+            <div class="annual-savings">
+                <span id="annual-savings-value">R$ 0,00</span>
+                <small>por ano</small>
+            </div>
+            <p>Isso representa <span id="savings-percent">0%</span> de economia na sua conta de energia!</p>
+            <a href="#contato" class="cta-button responsive-cta">
+              <span class="cta-text">Quero Economizar</span>
+              <svg class="cta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Modal para mostrar a economia anual -->
+
+
+
+
+
+   <!-- FAQ Section -->
+<section id="duvidas" class="faq-section">
+    <div class="container">
+        <div class="faq-header">
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <p class="section-subtitle">Encontre respostas para as principais perguntas</p>
+        </div>
+
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Preciso instalar equipamentos na minha empresa?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Não! Nosso modelo de energia não exige nenhuma instalação ou investimento em equipamentos. A energia é gerada por nossos parceiros e os créditos são aplicados diretamente na sua fatura da Equatorial.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Como funciona o sistema da Energia Alagoana?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Geramos energia 100% limpa e renovável em nossas usinas parceiras. Essa energia é transformada em créditos e injetada na distribuidora (Equatorial), reduzindo o valor da sua fatura mensal automaticamente.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Quais documentos são necessários para aderir?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Você só precisa assinar digitalmente o contrato e enviar os documentos do seu CNPJ ou CPF, além da última fatura de energia. O processo é 100% digital e prático.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Qual é a economia real que vou ter?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>A economia chega a até 20% na sua fatura de energia, sem investimento inicial. Você paga menos e ainda contribui com o meio ambiente utilizando energia renovável.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Quem são os geradores de energia?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-answer">
+                    <p>Trabalhamos com um portfólio de usinas parceiras que geram energia renovável e estão integradas à distribuidora Equatorial. Garantimos confiabilidade e sustentabilidade no fornecimento dos créditos.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-cta">
+            <p>Ainda tem dúvidas? Nosso time está pronto para te ajudar!</p>
+            <a href="#contato" class="cta-button">Fale Conosco</a>
+        </div>
+    </div>
+</section>
+
+  <!-- Partners Section -->
+<section class="clients-section">
+    <div class="container">
+        <h2 class="section-title">Nossos clientes</h2>
+        <p class="section-subtitle">Empresas que já estão economizando</p>
+
+        <div class="clients-grid">
+            <!-- Logo 1 -->
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/Oi.png') }}" alt="Logo Empresa 1" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <!-- Logo 2 -->
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/BRK.JPG') }}" alt="Logo Empresa 2" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <!-- Repita para as outras 5 empresas -->
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/bobs.png') }}" alt="Logo Empresa 3" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/drogasil.jpg') }}" alt="Logo Empresa 4" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/hotel-ponta-verde-maceio.jpeg') }}" alt="Logo Empresa 5" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/rancho-alegre.png') }}" alt="Logo Empresa 6" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/hotel-brisa-tower.png') }}" alt="Logo Empresa 7" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/bitiguin.jpg') }}" alt="Logo Empresa 7" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/costamar.png') }}" alt="Logo Empresa 7" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+
+            <div class="client-logo-container">
+                <img src="{{ url_for('static', filename='images/emporio.png') }}" alt="Logo Empresa 7" class="client-logo" loading="lazy">
+                <div class="logo-hover-effect"></div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Contact Section -->
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <p>Preencha o formulário ou utilize nossos canais de atendimento</p>
+
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Endereço</h3>
+                                <p>Humberto lobo<br>Serraria, Maceió - AL</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Telefones</h3>
+                                <p>Vendas: (82) 9 9902-0833<br>Atendimento: (82) 9 9902-0833</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>E-mail</h3>
+                                <p>comercial@energialimpa.com.br<br>atendimento@energialimpa.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Horário de Atendimento</h3>
+                                <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h3>Siga-nos</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <select id="subject" required>
+                                    <option value="">Selecione...</option>
+                                    <option value="commercial">Dúvidas Comerciais</option>
+                                    <option value="support">Suporte Técnico</option>
+                                    <option value="partnership">Parcerias</option>
+                                    <option value="other">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31471.521438717344!2d-35.736923017980146!3d-9.60041957602175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7014646e5c62d6d%3A0x6323171346271454!2sSerraria%2C%20Macei%C3%B3%20-%20AL!5e0!3m2!1spt-BR!2sbr!4v1751335612102!5m2!1spt-BR!2sbr" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    </section>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-widget">
+        <div class="chatbot-header">
+            <h3>Assistente Virtual</h3>
+            <button id="close-chat"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chat-messages">
+            <div class="bot-message">
+                <p>Olá! Sou o assistente virtual da Energia Limpa. Posso te ajudar a entender como economizar até 20% na sua conta de luz com energia renovável. Como posso te ajudar hoje?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+            <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button id="chatbot-toggle" class="chatbot-toggle">
+        <i class="fas fa-comments"></i>
+        <span>Precisa de ajuda?</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo-energia-alagoana-white.png" alt="Energia Limpa">
+                    </div>
+                    <p>Soluções inteligentes em energia renovável para Alagoas e todo o Nordeste.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#beneficios">Benefícios</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                        <li><a href="#duvidas">Dúvidas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Fernandes Lima, 1234 - Farol, Maceió/AL</li>
+                        <li><i class="fas fa-phone-alt"></i> (82) 9 9902-0833</li>
+                        <li><i class="fas fa-envelope"></i> contato@energiaalagoana.com.br</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Assine e receba novidades sobre energia renovável e promoções.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit">Assinar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Energia Limpa. Todos os direitos reservados.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5582999020833" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
